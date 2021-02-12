@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Film Recommendation</title>
+        <title>Twitter Sentiment Analysis</title>
     </head>
 
     <style type="text/css">
@@ -8,37 +8,31 @@
     		background-color:#B0C4DE;
     		text-align: center;
     	}
-
     	table{
     		width:100%;
     		border:0;
     		border-spacing:0;
-		}
-
-		td{
-			padding:30px;
-			width : 87%;
-		}
-
-		h4{padding-top: 2%;}
-
-		.isi{height: 390px;}
-
-		.cari{text-align: center;}
-
-		.recom{color: darkgray;}
-
-    .hasil{
-      padding-left:100px; 
-    }
+		  }
+  		td{
+  			padding:30px;
+  			width : 87%;
+  		}
+  		h4{padding-top: 2%;}
+  		.isi{height: 390px;}
+  		.cari{text-align: center;}
+  		.recom{color: darkgray;}
+      .hasil{text-align: center;}
+      button{height: 40px;}
+      input[type=text] {
+        width: 400px;
+        height: 40px;
+      }
     </style>
 
     <body>
         <table>
             <tr>
-                <td class="header">
-                	MAGNIFYING<br><b>MOVIE RECOMMENDER</b>
-                </td>
+                <td class="header">TWITTER SENTIMENT ANALYSIS<br><b>CORONA VACCINE</b></td>
             </tr>
         </table>
 
@@ -48,14 +42,11 @@
                    <form method="get" name="sort-btn" action="/bot_search/">
                        <div class="cari">
                        		<input type="text" name="query" placeholder="Search">
-	                        <button type="submit">Search</button>
+	                        <button type="submit">Analysis</button>
                        		{% if ans %}
-                       		<h4 class="recom">Recommendation Film for Film {{query}} :</h4>
-                       </div>
-                       <div class="hasil">
-                       		<h4>{{ans}}</h4>
-                       		<h4>{{ans1}}</h4>
-                       {% endif %}
+                         		<h4 class="recom">Sentiment Analysis Results from tweets:</h4>
+                            <p class="">{{query}} is <b>{{ans}}<b> </p>
+                          {% endif %}
                        </div>
                   </form>
                 </td>
