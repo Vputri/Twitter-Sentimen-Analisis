@@ -1,13 +1,13 @@
 import twint
 
 twi = twint.Config()
-twi.Search = 'vaksin corona'
+twi.Search = 'dukung vaksin corona'
 twi.Lang = 'in'
+twi.Until = '2021-02-18'
+twi.Since = '2021-01-13'
+Limit = 1000
 Pandas = True
-twi.Until = '2020-12-20'
-twi.Since = '2020-12-13'
 twi.Custom["tweet"] = ["id", "date", "username", "tweet"]
-twi.Limit = 2500
-twi.Output = "vaksin.csv"
+twi.Output = "vaksin2.csv"
 twi.Store_csv = True
 twint.run.Search(twi)
