@@ -6,8 +6,8 @@ def index(request):
 
 def bot_search(request):
     query = request.GET.get('query')
-    filename = '/home/vika/sentimen analisis/results/vektor.sav'
-    filename1 = '/home/vika/sentimen analisis/results/MNB.sav'
+    filename = '/home/vika/sentimen analisis/web/webbot/vektor.sav'
+    filename1 = '/home/vika/sentimen analisis/web/webbot/MNB.sav'
     vektor = joblib.load(filename)
     model = joblib.load(filename1)
     result = model.predict(vektor.transform([query]))
